@@ -4,6 +4,7 @@ const userRouter = require("./src/modules/auth/auth.router.js");
 const categoryRouter = require("./src/modules/Category/Category.router.js");
 const brandRouter = require("./src/modules/Brand/Brand.router.js");
 const carRouter = require("./src/modules/Car/Car.router.js");
+const bookingRouter = require("./src/modules/Booking/Booking.router.js");
 const mongodbconnect = require("./Database/dbConnection.js");
 
 const AppRouter = (app) => {
@@ -18,6 +19,7 @@ const AppRouter = (app) => {
   app.use("/api/category", categoryRouter);
   app.use("/api/brand", brandRouter);
   app.use("/api/car", carRouter);
+  app.use("/api/booking", bookingRouter);
 
   // 404 route
   app.use("*", (req, res) => {
