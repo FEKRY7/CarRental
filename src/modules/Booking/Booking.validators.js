@@ -26,13 +26,13 @@ const changeBookingRequestStatus = joi
 
 const deleteBookingRequest = joi
   .object({
-    id: joi.string().custom(isValidObjectId).required(),
+    bookingId: joi.string().custom(isValidObjectId).required(),
   })
   .required();
 
 const getBookingById = joi
   .object({
-    id: joi.string().custom(isValidObjectId).required(),
+    bookingId: joi.string().custom(isValidObjectId).required(),
   })
   .required();
 
