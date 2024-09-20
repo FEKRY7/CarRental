@@ -24,7 +24,7 @@ router
   .post(validation(createBookingRequest), CreateBookingRequest)
   .get(isAuthenticated, isAuthorized("Admin"), GetAllBookingRequests);
 router
-  .route("/:bookingId")
+  .route("/:id")
   .patch(
     isAuthenticated,
     isAuthorized("Admin"),
