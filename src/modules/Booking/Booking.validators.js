@@ -19,9 +19,8 @@ const createBookingRequest = joi
 
 const changeBookingRequestStatus = joi
   .object({
-    fullName: joi.string(),
-    mobilePhone: joi.string(),
-    id: joi.string().custom(isValidObjectId).required(),
+    status: joi.string(),
+    bookingId: joi.string().custom(isValidObjectId).required(),
   })
   .required();
 
