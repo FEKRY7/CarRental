@@ -20,19 +20,19 @@ const createBookingRequest = joi
 const changeBookingRequestStatus = joi
   .object({
     status: joi.string(),
-    bookingId: joi.string().custom(isValidObjectId).required(),
+    id: joi.string().custom(isValidObjectId).required(),
   })
   .required();
 
 const deleteBookingRequest = joi
   .object({
-    bookingId: joi.string().custom(isValidObjectId).required(),
+    id: joi.string().custom(isValidObjectId).required(),
   })
   .required();
 
 const getBookingById = joi
   .object({
-    bookingId: joi.string().custom(isValidObjectId).required(),
+    id: joi.string().custom(isValidObjectId).required(),
   })
   .required();
 
