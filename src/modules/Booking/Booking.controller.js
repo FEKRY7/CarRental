@@ -64,11 +64,11 @@ const DeleteBookingRequest = deleteOne(bookingModel);
 
 const ChangeBookingRequestStatus = async (req, res, next) => {
   try {
-    const { id } = req.params;
+    const { bookingId } = req.params;
     const { status } = req.body;
 
     const checkRequest = await bookingModel.findByIdAndUpdate(
-      id,
+      bookingId,
       { status },
       { new: true }
     );
